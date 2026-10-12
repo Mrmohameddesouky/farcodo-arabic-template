@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:version='2' dir='rtl' lang='ar' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width,initial-scale=1' name='viewport'/>
+<meta content='#0a5cff' name='theme-color'/>
+<!-- Farcodo Arabic Blogger template — original work. See LICENSES.md for third-party notes. -->
+<b:include data='blog' name='all-head-content'/>
+<title><b:if cond='data:blog.pageType == "index" and data:blog.url == data:blog.homepageUrl'><data:blog.title/><b:elseif cond='data:blog.pageType == "error_page"'/>الصفحة غير موجودة - <data:blog.title/><b:elseif cond='data:blog.searchLabel'/>قسم <data:blog.searchLabel/> - <data:blog.title/><b:elseif cond='data:blog.searchQuery'/>نتائج البحث عن <data:blog.searchQuery/> - <data:blog.title/><b:elseif cond='data:blog.pageType == "archive"'/>أرشيف <data:blog.pageName/> - <data:blog.title/><b:elseif cond='data:blog.pageType == "index"'/>أحدث المقالات - <data:blog.title/><b:else/><data:blog.pageName/> - <data:blog.title/></b:if></title>
+<b:if cond='data:blog.pageType == "error_page"'><meta content='noindex,nofollow' name='robots'/><b:elseif cond='data:blog.pageType == "item" or data:blog.pageType == "static_page" or data:blog.url == data:blog.homepageUrl'/><meta content='index,follow,max-image-preview:large' name='robots'/></b:if>
+<meta content='summary_large_image' name='twitter:card'/>
+<link href='@@FAV64@@' rel='icon' type='image/png'/>
+<link href='@@APPLE180@@' rel='apple-touch-icon'/>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+<script>//<![CDATA[
+(function(){try{var t=localStorage.getItem('fc-theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})();
+//]]></script>
+<b:skin><![CDATA[
+/*
+-----------------------------------------------
+Name:   Farcodo Arabic
+Version: 1.0.0
+Notes:  Original RTL Arabic template for Farcodo.
+-----------------------------------------------
+<Variable name="brand.navy" description="اللون الكحلي" type="color" default="#0a1a3f" value="#0a1a3f"/>
+<Variable name="brand.blue" description="الأزرق الكهربائي" type="color" default="#0a5cff" value="#0a5cff"/>
+<Variable name="brand.cyan" description="السماوي" type="color" default="#00c8ff" value="#00c8ff"/>
+*/
+@@CSS@@
+]]></b:skin>
+</head>
+<body expr:class='"fc-" + data:blog.pageType'>
+<a class='skip' href='#fc-main'>تخطي إلى المحتوى الرئيسي</a>
+<svg aria-hidden='true' height='0' style='position:absolute' width='0' xmlns='http://www.w3.org/2000/svg'>
+<symbol id='i-search' viewBox='0 0 24 24'><circle cx='11' cy='11' r='6.5'/><path d='M16 16l4.5 4.5'/></symbol>
+<symbol id='i-menu' viewBox='0 0 24 24'><path d='M4 7h16M4 12h16M4 17h16'/></symbol>
+<symbol id='i-x' viewBox='0 0 24 24'><path d='M6 6l12 12M18 6L6 18'/></symbol>
+<symbol id='i-moon' viewBox='0 0 24 24'><path d='M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z'/></symbol>
+<symbol id='i-sun' viewBox='0 0 24 24'><circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4'/></symbol>
+<symbol id='i-link' viewBox='0 0 24 24'><path d='M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1'/></symbol>
+<symbol id='i-share' viewBox='0 0 24 24'><circle cx='6' cy='12' r='2.5'/><circle cx='18' cy='6' r='2.5'/><circle cx='18' cy='18' r='2.5'/><path d='M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6'/></symbol>
+<symbol id='i-left' viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></symbol>
+<symbol id='i-right' viewBox='0 0 24 24'><path d='M9 5l7 7-7 7'/></symbol>
+</svg>
+
+<header class='fc-header' id='top'>
+<div class='fc-wrap fc-hdr'>
+<a aria-label='Farcodo — الصفحة الرئيسية' class='fc-brand' expr:href='data:blog.homepageUrl'><img alt='' height='24' src='@@SYMBOL@@' width='24'/><span aria-hidden='true'>arcodo</span></a>
+<nav aria-label='القائمة الرئيسية' class='fc-nav'>
+<b:section class='fc-navsec' id='nav-section' maxwidgets='1' showaddelement='no'>
+<b:widget id='PageList1' locked='false' title='القائمة الرئيسية' type='PageList' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='pageListJson'>[]</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main' var='this'>
+<ul>
+<li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
+<b:loop values='data:links' var='link'>
+<b:if cond='data:link.href != data:blog.homepageUrl'>
+<li expr:class='data:link.isCurrentPage ? "is-current" : ""'><a expr:href='data:link.href'><data:link.title/></a></li>
+</b:if>
+</b:loop>
+</ul>
+</b:includable>
+</b:widget>
+</b:section>
+</nav>
+<div class='fc-acts'>
+<form action='/search' class='fc-search' method='get' role='search'>
+<input aria-label='ابحث في الموقع' autocomplete='off' name='q' placeholder='ابحث في الموقع…' type='search'/>
+<button aria-label='بحث' class='ib' type='submit'><svg aria-hidden='true' class='ico'><use href='#i-search'/></svg></button>
+</form>
+<button aria-label='التبديل إلى الوضع الداكن' aria-pressed='false' class='ib' id='fc-theme' type='button'><svg aria-hidden='true' class='ico i-moon'><use href='#i-moon'/></svg><svg aria-hidden='true' class='ico i-sun'><use href='#i-sun'/></svg></button>
+<button aria-controls='fc-drawer' aria-expanded='false' aria-label='فتح القائمة' class='ib' id='fc-menu' type='button'><svg aria-hidden='true' class='ico i-m'><use href='#i-menu'/></svg><svg aria-hidden='true' class='ico i-x'><use href='#i-x'/></svg></button>
+</div>
+</div>
+<div class='fc-drawer' hidden='hidden' id='fc-drawer'>
+<form action='/search' class='fc-search' method='get' role='search'>
+<input aria-label='ابحث في الموقع' name='q' placeholder='ابحث في الموقع…' type='search'/>
+<button aria-label='بحث' class='ib' type='submit'><svg aria-hidden='true' class='ico'><use href='#i-search'/></svg></button>
+</form>
+<nav aria-label='قائمة الجوال' class='fc-drawer-nav'></nav>
+</div>
+</header>
+
+<div class='fc-wrap fc-main-wrap'>
+<div class='fc-layout'>
+<main id='fc-main' tabindex='-1'>
+<b:section class='fc-mainsec' id='main' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='مقالات المدونة' type='Blog' version='2' visible='true'>
+<b:includable id='main' var='top'>
+<b:with value='data:blog.url == data:blog.homepageUrl' var='isHome'>
+<b:if cond='data:blog.pageType == "error_page"'>
+<b:include name='fc-error'/>
+
+<b:elseif cond='data:blog.pageType == "item"'/>
+<b:loop values='data:posts' var='post'><b:include data='post' name='fc-article'/></b:loop>
+<nav aria-label='التنقل بين المقالات' class='fc-pager'>
+<b:if cond='data:olderPageUrl'><a class='btn' expr:href='data:olderPageUrl' rel='prev'><svg aria-hidden='true' class='ico'><use href='#i-right'/></svg>المقال السابق</a></b:if>
+<b:if cond='data:newerPageUrl'><a class='btn' expr:href='data:newerPageUrl' rel='next'>المقال التالي<svg aria-hidden='true' class='ico'><use href='#i-left'/></svg></a></b:if>
+</nav>
+<section aria-labelledby='fc-rel-t' class='fc-related' id='fc-related'>
+<div class='fc-sec-head'><h2 class='fc-sec-t' id='fc-rel-t'>مقالات ذات صلة</h2></div>
+<p class='fc-state' id='fc-rel-state' role='status'>جارٍ تحميل المقالات…</p>
+<div class='fc-grid' id='fc-rel-grid'></div>
+</section>
+
+<b:elseif cond='data:blog.pageType == "static_page"'/>
+<b:loop values='data:posts' var='post'><b:include data='post' name='fc-page'/></b:loop>
+
+<b:elseif cond='data:isHome'/>
+<h1 class='sr'><data:blog.title/></h1>
+<section aria-label='أبرز المقالات' class='fc-hero'>
+<b:loop index='i' values='data:posts' var='post'><b:if cond='data:i == 0'><b:include data='post' name='fc-hero-main'/></b:if></b:loop>
+<div class='fc-hero-side'>
+<b:loop index='i' values='data:posts' var='post'><b:if cond='data:i == 1 or data:i == 2'><b:include data='post' name='fc-card'/></b:if></b:loop>
+</div>
+</section>
+<section aria-labelledby='fc-latest-t' class='fc-sec'>
+<div class='fc-sec-head'>
+<div><h2 class='fc-sec-t' id='fc-latest-t'>أحدث المقالات</h2><p class='fc-sec-sub'>آخر ما نُشر على فاركودو</p></div>
+<b:if cond='data:olderPageUrl'><a class='fc-more' expr:href='data:olderPageUrl'>المزيد من المقالات<svg aria-hidden='true' class='ico'><use href='#i-left'/></svg></a></b:if>
+</div>
+<div class='fc-grid'>
+<b:loop index='i' values='data:posts' var='post'><b:if cond='data:i &gt; 2'><b:include data='post' name='fc-card'/></b:if></b:loop>
+</div>
+</section>
+
+<b:else/>
+<header class='fc-listhead' expr:data-kind='data:blog.searchLabel ? "label" : "list"'>
+<nav aria-label='مسار التنقل' class='fc-bc'><ol>
+<li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
+<li aria-current='page'><span><b:if cond='data:blog.searchLabel'><data:blog.searchLabel/><b:elseif cond='data:blog.searchQuery'/>نتائج البحث<b:elseif cond='data:blog.pageType == "archive"'/>الأرشيف<b:else/>أحدث المقالات</b:if></span></li>
+</ol></nav>
+<b:if cond='data:blog.searchLabel'>
+<h1>قسم: <data:blog.searchLabel/></h1><p>جميع المقالات المنشورة في هذا القسم.</p>
+<b:elseif cond='data:blog.searchQuery'/>
+<h1>نتائج البحث عن «<data:blog.searchQuery/>»</h1><p>المقالات المطابقة لعبارة البحث.</p>
+<b:elseif cond='data:blog.pageType == "archive"'/>
+<h1>أرشيف: <data:blog.pageName/></h1><p>مقالات هذه الفترة.</p>
+<b:else/>
+<h1>أحدث المقالات</h1><p>تصفّح المقالات الأقدم.</p>
+</b:if>
+</header>
+<h2 class='sr'>قائمة المقالات</h2>
+<div class='fc-grid'>
+<b:loop values='data:posts' var='post'><b:include data='post' name='fc-card'/></b:loop>
+</div>
+<div class='fc-empty'>
+<p><strong>لم نعثر على مقالات.</strong></p>
+<p>جرّب كلمات أخرى أو تصفّح أحدث المقالات من الصفحة الرئيسية.</p>
+<a class='btn btn-p' expr:href='data:blog.homepageUrl'>العودة إلى الرئيسية</a>
+</div>
+<nav aria-label='التنقل بين الصفحات' class='fc-pager'>
+<b:if cond='data:newerPageUrl'><a class='btn' expr:href='data:newerPageUrl' rel='prev'><svg aria-hidden='true' class='ico'><use href='#i-right'/></svg>المقالات الأحدث</a></b:if>
+<b:if cond='data:olderPageUrl'><a class='btn' expr:href='data:olderPageUrl' rel='next'>المقالات الأقدم<svg aria-hidden='true' class='ico'><use href='#i-left'/></svg></a></b:if>
+</nav>
+</b:if>
+</b:with>
+</b:includable>
+
+<!-- Image block used by cards -->
+<b:includable id='fc-img' var='post'>
+<b:if cond='data:post.featuredImage'>
+<b:if cond='data:post.featuredImage.isResizable'>
+<img expr:alt='data:post.title' decoding='async' height='360' loading='lazy' sizes='(max-width:600px) 92vw, (max-width:1100px) 45vw, 400px' expr:src='resizeImage(data:post.featuredImage, 640, "16:9")' expr:srcset='resizeImage(data:post.featuredImage, 400, "16:9") + " 400w, " + resizeImage(data:post.featuredImage, 800, "16:9") + " 800w"' width='640'/>
+<b:else/>
+<img expr:alt='data:post.title' decoding='async' height='360' loading='lazy' expr:src='data:post.featuredImage' width='640'/>
+</b:if>
+<b:else/>
+<span aria-hidden='true' class='fc-ph'></span>
+</b:if>
+</b:includable>
+
+<b:includable id='fc-chip' var='post'>
+<b:if cond='data:post.labels'><b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:i == 0'><a class='fc-chip' expr:href='data:label.url'><data:label.name/></a></b:if></b:loop></b:if>
+</b:includable>
+
+<b:includable id='fc-card' var='post'>
+<article class='fc-card'>
+<a aria-hidden='true' class='fc-thumb' expr:href='data:post.url' tabindex='-1'><b:include data='post' name='fc-img'/></a>
+<div class='fc-body'>
+<b:include data='post' name='fc-chip'/>
+<h3 class='fc-t'><a expr:href='data:post.url'><data:post.title/></a></h3>
+<p class='fc-snip'><data:post.snippet/></p>
+<div class='fc-meta'><time><data:post.date/></time></div>
+</div>
+</article>
+</b:includable>
+
+<b:includable id='fc-hero-main' var='post'>
+<article class='fc-hero-main'>
+<b:if cond='data:post.featuredImage'>
+<b:if cond='data:post.featuredImage.isResizable'>
+<img expr:alt='data:post.title' class='fc-hero-img' decoding='async' fetchpriority='high' height='720' expr:src='resizeImage(data:post.featuredImage, 1200, "16:9")' expr:srcset='resizeImage(data:post.featuredImage, 640, "16:9") + " 640w, " + resizeImage(data:post.featuredImage, 1200, "16:9") + " 1200w"' sizes='(max-width:900px) 100vw, 800px' width='1280'/>
+<b:else/>
+<img expr:alt='data:post.title' class='fc-hero-img' decoding='async' fetchpriority='high' height='720' expr:src='data:post.featuredImage' width='1280'/>
+</b:if>
+</b:if>
+<div class='fc-hero-txt'>
+<b:include data='post' name='fc-chip'/>
+<h2 class='fc-hero-t'><a expr:href='data:post.url'><data:post.title/></a></h2>
+<p class='fc-snip'><data:post.snippet/></p>
+<div class='fc-meta'><time><data:post.date/></time></div>
+</div>
+</article>
+</b:includable>
+
+<b:includable id='fc-article' var='post'>
+<article class='fc-article' expr:data-id='data:post.id'>
+<nav aria-label='مسار التنقل' class='fc-bc'><ol>
+<li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
+<b:if cond='data:post.labels'><b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:i == 0'><li><a expr:href='data:label.url'><data:label.name/></a></li></b:if></b:loop></b:if>
+<li aria-current='page'><span><data:post.title/></span></li>
+</ol></nav>
+<header>
+<b:if cond='data:post.labels'><div class='fc-chips'><b:loop values='data:post.labels' var='label'><a class='fc-chip' expr:href='data:label.url' rel='tag'><data:label.name/></a></b:loop></div></b:if>
+<h1 class='fc-title'><data:post.title/></h1>
+<div class='fc-pmeta'>
+<b:if cond='data:post.author.name'><span class='au'><b:if cond='data:post.author.authorPhoto.url'><img alt='' expr:src='data:post.author.authorPhoto.url' height='28' width='28'/></b:if><span class='au-name'><data:post.author.name/></span></span></b:if>
+<span>نُشر في: <time><data:post.date/></time></span>
+<span class='fc-upd' hidden='hidden'></span>
+<span class='fc-rt'></span>
+</div>
+</header>
+<div class='post-body' expr:id='"post-body-" + data:post.id'><data:post.body/></div>
+<footer class='fc-foot'>
+<div class='fc-share' role='group' aria-label='مشاركة المقال'>
+<strong>شارك المقال:</strong>
+<a data-share='x' expr:href='"https://twitter.com/intent/tweet?url=" + data:post.url'>إكس</a>
+<a data-share='facebook' expr:href='"https://www.facebook.com/sharer/sharer.php?u=" + data:post.url'>فيسبوك</a>
+<a data-share='whatsapp' expr:href='"https://wa.me/?text=" + data:post.url'>واتساب</a>
+<a data-share='telegram' expr:href='"https://t.me/share/url?url=" + data:post.url'>تيليجرام</a>
+<a data-share='linkedin' expr:href='"https://www.linkedin.com/sharing/share-offsite/?url=" + data:post.url'>لينكدإن</a>
+<button data-copy='1' type='button'><svg aria-hidden='true' class='ico'><use href='#i-link'/></svg>نسخ الرابط</button>
+<button data-native='1' hidden='hidden' type='button'><svg aria-hidden='true' class='ico'><use href='#i-share'/></svg>مشاركة</button>
+</div>
+<b:if cond='data:post.author.name'>
+<div class='fc-author'>
+<b:if cond='data:post.author.authorPhoto.url'><img alt='' expr:src='data:post.author.authorPhoto.url' height='60' width='60'/></b:if>
+<div><span class='fc-small'>كاتب المقال</span><b><data:post.author.name/></b>
+<b:if cond='data:post.author.aboutMe'><p><data:post.author.aboutMe/></p></b:if></div>
+</div>
+</b:if>
+</footer>
+</article>
+<b:if cond='data:post.allowComments'>
+<section aria-label='التعليقات' class='fc-comments' id='comments'>
+<b:include data='post' name='comments'/>
+</section>
+</b:if>
+</b:includable>
+
+<b:includable id='fc-page' var='post'>
+<article class='fc-pagebox'>
+<nav aria-label='مسار التنقل' class='fc-bc'><ol>
+<li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
+<li aria-current='page'><span><data:post.title/></span></li>
+</ol></nav>
+<h1 class='fc-title'><data:post.title/></h1>
+<div class='post-body'><data:post.body/></div>
+</article>
+</b:includable>
+
+<b:includable id='fc-error'>
+<section class='fc-err'>
+<p aria-hidden='true' class='fc-404'>404</p>
+<h1>الصفحة غير موجودة</h1>
+<p>ربما نُقلت هذه الصفحة أو حُذفت، أو أن الرابط غير صحيح. يمكنك البحث عمّا تريد أو العودة إلى الصفحة الرئيسية.</p>
+<form action='/search' class='fc-search' method='get' role='search'>
+<input aria-label='ابحث في الموقع' name='q' placeholder='ابحث في الموقع…' type='search'/>
+<button aria-label='بحث' class='ib' type='submit'><svg aria-hidden='true' class='ico'><use href='#i-search'/></svg></button>
+</form>
+<a class='btn btn-p' expr:href='data:blog.homepageUrl'>العودة إلى الرئيسية</a>
+</section>
+</b:includable>
+</b:widget>
+</b:section>
+
+<b:section class='fc-homecats' id='home-categories' maxwidgets='1' showaddelement='yes'>
+<b:widget id='LinkList1' locked='false' title='أقسام الصفحة الرئيسية' type='LinkList' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='link-1'>/search/label/%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A</b:widget-setting>
+<b:widget-setting name='text-1'>الذكاء الاصطناعي | أدوات وتطبيقات وأخبار تصنع مستقبل التقنية</b:widget-setting>
+<b:widget-setting name='link-2'>/search/label/%D8%A7%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81%20%D9%88%D8%A7%D9%84%D8%A3%D8%AC%D9%87%D8%B2%D8%A9</b:widget-setting>
+<b:widget-setting name='text-2'>الهواتف والأجهزة | مراجعات ومقارنات تساعدك على الاختيار</b:widget-setting>
+<b:widget-setting name='link-3'>/search/label/%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1</b:widget-setting>
+<b:widget-setting name='text-3'>البرمجة والتطوير | شروحات وأدلة عملية للمطوّرين</b:widget-setting>
+<b:widget-setting name='link-4'>/search/label/%D8%A7%D9%84%D8%A3%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A</b:widget-setting>
+<b:widget-setting name='text-4'>الأمن الرقمي | نصائح لحماية بياناتك وحساباتك</b:widget-setting>
+<b:widget-setting name='sorting'>NONE</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main' var='this'>
+<b:if cond='data:blog.pageType == "index" and data:blog.url == data:blog.homepageUrl'>
+<div hidden='hidden' id='fc-cats-src'><b:loop values='data:links' var='link'><a expr:href='data:link.target'><data:link.name/></a></b:loop></div>
+<div id='fc-cats'></div>
+<noscript><p class='fc-state'>يتطلب عرض أقسام الصفحة الرئيسية تفعيل جافاسكربت في المتصفح.</p></noscript>
+</b:if>
+</b:includable>
+</b:widget>
+</b:section>
+</main>
+
+<aside aria-label='الشريط الجانبي' class='fc-side'>
+<b:section class='fc-sidesec' id='sidebar' maxwidgets='6' showaddelement='yes'>
+<b:widget id='PopularPosts1' locked='false' title='الأكثر قراءة' type='PopularPosts' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='numItemsToShow'>5</b:widget-setting>
+<b:widget-setting name='showThumbnails'>false</b:widget-setting>
+<b:widget-setting name='showSnippets'>false</b:widget-setting>
+<b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main' var='this'>
+<div class='widget'>
+<b:if cond='data:title != ""'><h2 class='widget-title'><data:title/></h2></b:if>
+<ol class='fc-pop'><b:loop values='data:posts' var='post'><li><a expr:href='data:post.href'><data:post.title/></a></li></b:loop></ol>
+</div>
+</b:includable>
+</b:widget>
+<b:widget id='Label1' locked='false' title='الأقسام' type='Label' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='display'>LIST</b:widget-setting>
+<b:widget-setting name='selectedLabelsList'/>
+<b:widget-setting name='showType'>ALL</b:widget-setting>
+<b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+<b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main' var='this'>
+<div class='widget'>
+<b:if cond='data:title != ""'><h2 class='widget-title'><data:title/></h2></b:if>
+<ul class='fc-labs'><b:loop values='data:labels' var='label'><li><a expr:href='data:label.url'><span><data:label.name/></span><small><data:label.count/></small></a></li></b:loop></ul>
+</div>
+</b:includable>
+</b:widget>
+</b:section>
+</aside>
+</div>
+</div>
+
+<footer class='fc-footer'>
+<div class='fc-wrap fc-foot-grid'>
+<div>
+<a aria-label='Farcodo — الصفحة الرئيسية' class='fc-brand' expr:href='data:blog.homepageUrl'><img alt='' height='24' src='@@SYMBOL@@' width='24'/><span aria-hidden='true'>arcodo</span></a>
+<b:section class='fc-footsec' id='footer-about' maxwidgets='1' showaddelement='yes'>
+<b:widget id='HTML1' locked='false' title='' type='HTML' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='content'>موقع عربي متخصص في التقنية، نقدّم فيه أخبارًا وشروحات ومراجعات مكتوبة بعناية لتبقى على اطّلاع بما هو قادم.</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>
+<div class='widget'><b:if cond='data:title != ""'><h2 class='widget-title'><data:title/></h2></b:if><div class='widget-content'><data:content/></div></div>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+<div>
+<b:section class='fc-footsec' id='footer-pages' maxwidgets='1' showaddelement='yes'>
+<b:widget id='PageList2' locked='false' title='روابط مهمة' type='PageList' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='pageListJson'>[]</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main' var='this'>
+<div class='widget'>
+<b:if cond='data:title != ""'><h2 class='widget-title'><data:title/></h2></b:if>
+<ul><b:loop values='data:links' var='link'><b:if cond='data:link.href != data:blog.homepageUrl'><li><a expr:href='data:link.href'><data:link.title/></a></li></b:if></b:loop></ul>
+</div>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+<div>
+<b:section class='fc-footsec' id='footer-labels' maxwidgets='1' showaddelement='yes'>
+<b:widget id='Label2' locked='false' title='الأقسام' type='Label' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='display'>LIST</b:widget-setting>
+<b:widget-setting name='selectedLabelsList'/>
+<b:widget-setting name='showType'>ALL</b:widget-setting>
+<b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+<b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
+</b:widget-settings>
+<b:includable id='main' var='this'>
+<div class='widget'>
+<b:if cond='data:title != ""'><h2 class='widget-title'><data:title/></h2></b:if>
+<ul><b:loop values='data:labels' var='label'><li><a expr:href='data:label.url'><data:label.name/></a></li></b:loop></ul>
+</div>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+</div>
+<div class='fc-wrap fc-bottom'>
+<span>© <span id='fc-year'></span> Farcodo. جميع الحقوق محفوظة.</span>
+<a href='#top'>العودة إلى الأعلى</a>
+</div>
+</footer>
+<div aria-live='polite' id='fc-toast' role='status'></div>
+<script>//<![CDATA[
+@@JS@@
+//]]></script>
+</body>
+</html>

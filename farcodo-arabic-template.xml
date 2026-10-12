@@ -117,7 +117,7 @@ body.fc-error_page .fc-layout{grid-template-columns:minmax(0,1fr)}
 .fc-labs small{color:var(--muted)}
 
 /* Section heads */
-.fc-sec{margin-top:48px}
+.fc-sec{margin-top:34px}.fc-sec:first-of-type{margin-top:12px}.fc-sec-head{margin-bottom:16px}.fc-sec-t{font-size:clamp(21px,2vw,26px)}.fc-state{min-height:82px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--surface) 78%,var(--bg));font-size:15px}
 .fc-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
 .fc-sec-t{margin:0;font-size:26px;line-height:1.4;font-weight:700;position:relative;padding-inline-start:16px}
 .fc-sec-t::before{content:"";position:absolute;inset-inline-start:0;top:.25em;bottom:.25em;width:5px;border-radius:5px;background:var(--grad)}
@@ -944,7 +944,31 @@ layout=grid</b:widget-setting>
   }
 
   /* ---------- Layout-driven gadgets (plain-text settings edited in Blogger Layout) ---------- */
-  function gadgets(sel) { return $$(sel + ' .widget'); }
+  function gadgets(sel) {
+    var found = $(sel + ' .widget');
+    /* Blogger can occasionally restore a section without its saved HTML gadgets.
+       Use editable-in-code defaults only as a recovery fallback; once real gadgets
+       exist, their order and settings remain fully controlled from Layout. */
+    if (sel === '#home-sections' && !found.length) {
+      var host = $('#home-sections');
+      if (host) {
+        [
+          {title:'الذكاء الاصطناعي', label:'الذكاء الاصطناعي', subtitle:'أدوات وتطبيقات وأخبار الذكاء الاصطناعي', count:4, layout:'grid'},
+          {title:'التقنية', label:'التقنية', subtitle:'آخر أخبار التقنية والشروحات', count:4, layout:'grid'},
+          {title:'صناعة المحتوى', label:'صناعة المحتوى', subtitle:'أدوات وأفكار لصناعة محتوى أفضل', count:4, layout:'grid'},
+          {title:'أدوات مفيدة', label:'أدوات مفيدة', subtitle:'أدوات عملية تستحق التجربة', count:4, layout:'grid'}
+        ].forEach(function (cfg) {
+          var w = el('div', 'widget HTML fc-cfg');
+          w.setAttribute('data-fc-fallback', '1');
+          var title = el('h3', 'title', cfg.title);
+          var content = el('div', 'widget-content');
+          content.textContent = 'label=' + cfg.label + '\\nsubtitle=' + cfg.subtitle + '\\ncount=' + cfg.count + '\\nlayout=' + cfg.layout;
+          w.appendChild(title); w.appendChild(content); host.appendChild(w); found.push(w);
+        });
+      }
+    }
+    return found;
+  }
   function yes(v) { return /^(yes|true|1|نعم)$/i.test((v || '').trim()); }
   function safeUrl(u) {
     u = (u || '').trim();

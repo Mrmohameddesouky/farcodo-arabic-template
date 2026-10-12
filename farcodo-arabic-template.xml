@@ -1119,8 +1119,16 @@ layout=grid</b:widget-setting>
   /* Hero banner */
   function banner() {
     var sec = $('#herobanner'), ph = $('.fc-hero'); if (!sec || !ph) return;
-    var g = gadgets('#herobanner')[0]; if (!g) return;
-    var c = readCfg(g);
+    var g = gadgets('#herobanner')[0];
+    /* Keep a complete first-visit banner if Blogger drops the HTML gadget during restore. */
+    var c = g ? readCfg(g) : {
+      badge: 'Farcodo — الإصدار الأول 2026',
+      heading: 'كل ما يهمك في التقنية والذكاء الاصطناعي',
+      description: 'شروحات ومراجعات وأدوات مختارة بعناية، بلغة عربية واضحة تساعدك على الفهم والتطبيق.',
+      button1: 'تصفّح المقالات | /search',
+      button2: 'استكشف الأقسام | #fc-sections',
+      align: 'right', posts: 'show'
+    };
     if (/^(hide|no|none)$/i.test(c.posts || '')) ph.hidden = true;
     if (yes(c.hidden)) return;
     var h = c.heading || c._title; if (!h && !c.description) return;

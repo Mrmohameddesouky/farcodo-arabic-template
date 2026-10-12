@@ -89,6 +89,8 @@ a:hover{text-decoration:underline}
 .fc-drawer[hidden]{display:none}
 .fc-drawer .fc-search{margin-bottom:16px}.fc-drawer .fc-search input{width:100%;flex:1}
 .fc-drawer-nav ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.fc-drawer-nav>.fc-mobile-home{display:block;padding:12px 16px;border-radius:12px;color:var(--ink);font-size:18px;font-weight:600}
+.fc-drawer-nav>.fc-mobile-home:hover{background:color-mix(in srgb,var(--blue) 10%,transparent);text-decoration:none}
 .fc-drawer-nav a{font-size:18px;padding:12px 16px;border-radius:12px}
 
 /* Layout */
@@ -309,7 +311,7 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
 <input aria-label='ابحث في الموقع' name='q' placeholder='ابحث في الموقع…' type='search'/>
 <button aria-label='بحث' class='ib' type='submit'><svg aria-hidden='true' class='ico'><use href='#i-search'/></svg></button>
 </form>
-<nav aria-label='قائمة الجوال' class='fc-drawer-nav'></nav>
+<nav aria-label='قائمة الجوال' class='fc-drawer-nav'><a class='fc-mobile-home' expr:href='data:blog.homepageUrl'>الرئيسية</a></nav>
 </div>
 </header>
 
@@ -724,7 +726,6 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
       homeItem.appendChild(homeLink);
       copy.insertBefore(homeItem, copy.firstChild);
       buildMenuTree(copy);
-      box.textContent = '';
       box.appendChild(copy);
       box.addEventListener('click', function (e) {
         var link = e.target.closest && e.target.closest('li.has-submenu > a');

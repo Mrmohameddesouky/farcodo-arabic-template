@@ -1083,7 +1083,7 @@ layout=grid</b:widget-setting>
       s.__load = function () {
         st.textContent = T.loading; st.hidden = false;
         feedC(path, n).then(function (es) {
-          if (!es.length) { if (yes(c.empty)) st.textContent = T.empty; else if (s.parentNode) s.parentNode.removeChild(s); return; }
+          if (!es.length) { body.textContent = ''; st.textContent = T.empty; st.hidden = false; return; }
           st.hidden = true; body.textContent = '';
           es.forEach(function (p) { body.appendChild(layout === 'compact' ? crow(p) : card(p)); });
         }).catch(function () {

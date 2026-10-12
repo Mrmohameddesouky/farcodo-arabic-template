@@ -267,9 +267,7 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
 <nav aria-label='القائمة الرئيسية' class='fc-nav'>
 <b:section class='fc-navsec' id='nav-section' maxwidgets='1' showaddelement='no'>
 <b:widget id='PageList1' locked='false' title='القائمة الرئيسية' type='PageList' version='2' visible='true'>
-<b:widget-settings>
-<b:widget-setting name='pageListJson'>[]</b:widget-setting>
-</b:widget-settings>
+
 <b:includable id='main' var='this'>
 <ul>
 <li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
@@ -573,9 +571,7 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
 <div>
 <b:section class='fc-footsec' id='footer-pages' maxwidgets='1' showaddelement='yes'>
 <b:widget id='PageList2' locked='false' title='روابط مهمة' type='PageList' version='2' visible='true'>
-<b:widget-settings>
-<b:widget-setting name='pageListJson'>[]</b:widget-setting>
-</b:widget-settings>
+
 <b:includable id='main' var='this'>
 <div class='widget'>
 <b:if cond='data:title != ""'><h2 class='widget-title'><data:title/></h2></b:if>

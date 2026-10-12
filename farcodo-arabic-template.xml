@@ -318,7 +318,54 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
 @media (max-width:1100px){.fc-grid[data-n="4"]{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:900px){.fc-grid[data-n="3"]{grid-template-columns:repeat(2,minmax(0,1fr))}.fc-banner{grid-template-columns:minmax(0,1fr)}.fc-hdrsoc{display:none}.fc-list{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:600px){.fc-grid[data-n]{grid-template-columns:minmax(0,1fr)}.fc-banner-btns .btn{flex:1;justify-content:center}.fc-list .fc-thumb{width:34%}.fc-clist li{flex-direction:column;gap:2px}}
-]]></b:skin>
+]]>
+/* FAR CODO DESIGN SYSTEM — V1 2026 */
+:root{--fc-blue:#0878f9;--fc-blue2:#05a5ff;--fc-navy:#031f36;--fc-ink:#102d4b;--fc-muted:#647a91;--fc-line:#dce9f7;--fc-soft:#f3f8fe;--fc-card:#fff;--fc-radius:15px;--fc-shadow:0 8px 26px rgba(11,57,103,.075)}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(180deg,#f4f9ff 0,#fff 340px,#f6faff 100%);color:var(--fc-ink);font-family:Tahoma,Arial,sans-serif}
+a{transition:color .2s ease,background .2s ease,transform .2s ease}
+a:hover{color:var(--fc-blue)}
+img{max-width:100%;height:auto}
+.fc-header,.header-wrapper,.header-inner{background:#fff}
+.fc-header{box-shadow:0 5px 24px rgba(8,48,86,.06);border-bottom:1px solid #e8f0fa;position:relative;z-index:20}
+.fc-top,.fc-topbar,.topbar{background:linear-gradient(100deg,#031c30,#063653);color:#eaf5ff}
+.fc-header .widget,.fc-nav .widget,.fc-hdrsoc .widget{margin:0}
+.fc-nav{font-weight:700}
+.fc-nav a{font-size:13px}
+.fc-brandsec img,.fc-logo img,.header-logo img{max-height:62px;width:auto;object-fit:contain}
+.fc-banner,.fc-hero,.fc-herosec .widget-content{border-radius:var(--fc-radius);overflow:hidden}
+.fc-banner{box-shadow:0 12px 30px rgba(0,53,104,.13);border:1px solid rgba(255,255,255,.5)}
+.fc-banner h1,.fc-banner h2{line-height:1.45;letter-spacing:-.3px}
+.fc-banner p{line-height:1.9}
+.fc-banner .btn,.fc-banner-btns .btn,.button{border-radius:999px;background:linear-gradient(110deg,var(--fc-blue),#0056d8);box-shadow:0 5px 14px rgba(0,105,245,.23);font-weight:700}
+.fc-homesec .widget,.fc-category,.fc-cat-card,.fc-card,.post-outer,.post{border-radius:12px}
+.fc-homesec .widget{background:#fff;border:1px solid #e3edf8;box-shadow:var(--fc-shadow);padding:12px;transition:transform .22s ease,box-shadow .22s ease}
+.fc-homesec .widget:hover,.post-outer:hover{transform:translateY(-3px);box-shadow:0 13px 28px rgba(11,57,103,.11)}
+.fc-homesec .widget img,.fc-grid img,.fc-list img{border-radius:9px}
+.fc-section-title,.fc-listhead,.widget-title{color:var(--fc-ink);font-weight:800}
+.fc-section-title:after,.widget-title:after{content:"";display:block;width:42px;height:3px;margin-top:8px;border-radius:5px;background:linear-gradient(90deg,var(--fc-blue),#78caff)}
+.fc-mainsec,.fc-sidesec{min-width:0}
+.fc-sidesec .widget{background:#fff;border:1px solid #e1edf9;border-radius:13px;padding:14px;box-shadow:var(--fc-shadow);margin-bottom:16px}
+.fc-sidesec .widget img{border-radius:9px}
+.fc-grid{gap:14px}
+.fc-grid .post-outer,.fc-grid .post{background:#fff;border:1px solid #e4edf7;box-shadow:0 4px 15px rgba(10,52,92,.045);padding:10px;border-radius:12px}
+.fc-grid .post-title,.fc-list .post-title{font-size:15px;line-height:1.8;font-weight:800}
+.fc-grid .post-title a,.fc-list .post-title a{color:#102d4b}
+.fc-grid .post-title a:hover,.fc-list .post-title a:hover{color:var(--fc-blue)}
+.fc-meta,.post-footer,.post-header{color:var(--fc-muted);font-size:12px}
+.fc-footer,.footer-wrapper,.footer{background:linear-gradient(125deg,#031b2e,#07324d);color:#eaf5ff}
+.fc-footer a,.footer-wrapper a,.footer a{color:#d5eaff}
+.fc-footer a:hover,.footer-wrapper a:hover,.footer a:hover{color:#42b5ff}
+.fc-footer .widget,.footer-wrapper .widget{background:transparent;border:0;box-shadow:none}
+.fc-footer-bottom{border-top:1px solid rgba(255,255,255,.17)}
+input,textarea,select{border-radius:10px!important;border:1px solid #dce8f6!important}
+button,input[type=submit]{border-radius:999px}
+:focus-visible{outline:3px solid rgba(0,126,255,.45);outline-offset:3px}
+@media(min-width:1100px){.content-wrapper,.outer-wrapper{max-width:1200px}}
+@media(max-width:900px){.fc-banner{border-radius:12px}.fc-homesec .widget{padding:10px}.fc-sidesec .widget{padding:12px}}
+@media(max-width:600px){body{font-size:14px}.fc-banner h1,.fc-banner h2{font-size:25px;line-height:1.5}.fc-banner p{font-size:13px}.fc-homesec .widget{border-radius:11px}.fc-grid{gap:10px}.fc-grid .post-outer,.fc-grid .post{padding:8px}.fc-footer{padding-top:24px}}
+
+</b:skin>
 </head>
 <body expr:class='"fc-" + data:blog.pageType'>
 <a class='skip' href='#fc-main'>تخطي إلى المحتوى الرئيسي</a>

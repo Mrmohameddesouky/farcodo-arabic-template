@@ -5,7 +5,7 @@
 <meta charset='utf-8'/>
 <meta content='width=device-width,initial-scale=1' name='viewport'/>
 <meta content='#0a5cff' name='theme-color'/>
-<!-- Farcodo Arabic Blogger template — original work. See LICENSES.md for third-party notes. -->
+<!-- Farcodo Arabic Blogger template — Farcodo V1 / 2026. Original implementation; preserve all third-party notices in LICENSES.md. -->
 <b:include data='blog' name='all-head-content'/>
 <title><b:if cond='data:blog.pageType == "index" and data:blog.url == data:blog.homepageUrl'><data:blog.title/><b:elseif cond='data:blog.pageType == "error_page"'/>الصفحة غير موجودة - <data:blog.title/><b:elseif cond='data:blog.searchLabel'/>قسم <data:blog.searchLabel/> - <data:blog.title/><b:elseif cond='data:blog.searchQuery'/>نتائج البحث عن <data:blog.searchQuery/> - <data:blog.title/><b:elseif cond='data:blog.pageType == "archive"'/>أرشيف <data:blog.pageName/> - <data:blog.title/><b:elseif cond='data:blog.pageType == "index"'/>أحدث المقالات - <data:blog.title/><b:else/><data:blog.pageName/> - <data:blog.title/></b:if></title>
 <b:if cond='data:blog.pageType == "error_page"'><meta content='noindex,nofollow' name='robots'/><b:elseif cond='data:blog.pageType == "item" or data:blog.pageType == "static_page" or data:blog.url == data:blog.homepageUrl'/><meta content='index,follow,max-image-preview:large' name='robots'/></b:if>
@@ -384,6 +384,18 @@ button,input[type=submit]{border-radius:999px}
 .fc-version{font-size:11px;color:#b9d5ed;letter-spacing:.15px}
 .fc-bottom{gap:14px}
 @media(max-width:600px){.fc-topbar-inner{min-height:34px}.fc-topbar p{font-size:11px}.fc-topbar a{font-size:11px}.fc-start{align-items:flex-start;flex-wrap:wrap;padding:16px;gap:12px}.fc-start-icon{width:44px;height:44px;flex-basis:44px;border-radius:12px}.fc-start-icon svg{width:30px;height:30px}.fc-start-copy{flex:1 1 calc(100% - 60px)}.fc-start h2{font-size:17px}.fc-start .btn{width:100%;justify-content:center}.fc-version{order:3;width:100%;text-align:center}}
+
+
+/* Accessibility and active navigation polish — Farcodo V1 / 2026 */
+.skip{position:fixed;z-index:9999;top:8px;right:8px;transform:translateY(-160%);padding:12px 18px;border-radius:10px;background:#0878f9;color:#fff!important;font-weight:800;box-shadow:0 5px 18px rgba(0,0,0,.18)}
+.skip:focus{transform:translateY(0);outline:3px solid #fff;outline-offset:2px}
+.fc-nav a[aria-current=page]{background:linear-gradient(110deg,#0878f9,#0758d5);color:#fff;box-shadow:0 4px 12px rgba(8,120,249,.18)}
+.fc-nav li.is-current>a{color:#fff}
+.fc-drawer-nav a[aria-current=page]{background:linear-gradient(110deg,#0878f9,#0758d5);color:#fff}
+.fc-brand{flex-shrink:0}
+.fc-brand img{object-fit:contain}
+.fc-social a:focus-visible,.fc-nav a:focus-visible,.fc-drawer-nav a:focus-visible,.fc-more:focus-visible{outline:3px solid rgba(8,120,249,.55);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
 </b:skin>
 </head>
@@ -928,7 +940,22 @@ layout=grid</b:widget-setting>
     });
     root.setAttribute('data-tree-ready', '1');
   }
-  function initHeaderMenus() { buildMenuTree($('.fc-nav ul')); }
+  function initHeaderMenus() {
+    var nav = $('.fc-nav ul');
+    buildMenuTree(nav);
+    if (!nav) return;
+    var current = pathKey(location.href).replace(/\/$/, '') || '/';
+    $('a', nav).forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      if (!/^https?:/i.test(href) && href.charAt(0) !== '/') return;
+      var target = pathKey(a.href).replace(/\/$/, '') || '/';
+      if (target === current || (target !== '/' && current.indexOf(target + '/') === 0)) {
+        a.setAttribute('aria-current', 'page');
+        var li = a.closest('li');
+        if (li) li.classList.add('is-current');
+      }
+    });
+  }
 
   /* ---------- Mobile drawer ---------- */
   function initDrawer() {

@@ -713,43 +713,65 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
 
   /* ---------- Mobile drawer ---------- */
   function initDrawer() {
-    var btn = $('#fc-menu'), dr = $('#fc-drawer'); if (!btn || !dr) return;
-    var nav = $('.fc-nav ul'), box = $('.fc-drawer-nav', dr);
-    if (box) {
-      var copy = nav ? nav.cloneNode(true) : d.createElement('ul');
-      copy.removeAttribute('data-tree-ready');
-      var homeItem = d.createElement('li');
-      var homeLink = d.createElement('a');
-      var homeSource = $('.fc-home-link');
-      homeLink.href = homeSource ? homeSource.href : (location.origin + '/');
-      homeLink.textContent = 'الرئيسية';
-      homeItem.appendChild(homeLink);
-      copy.insertBefore(homeItem, copy.firstChild);
-      buildMenuTree(copy);
-      box.appendChild(copy);
-      box.addEventListener('click', function (e) {
-        var link = e.target.closest && e.target.closest('li.has-submenu > a');
-        if (!link) return;
-        if (link.getAttribute('href') === '#') e.preventDefault();
-        link.parentElement.classList.toggle('submenu-open');
-      });
-    }
+    var btn = $('#fc-menu'), dr = $('#fc-drawer');
+    if (!btn || !dr) return;
+
     function tg(o) {
       dr.hidden = !o;
       btn.setAttribute('aria-expanded', o ? 'true' : 'false');
       btn.setAttribute('aria-label', o ? T.close : T.open);
       d.body.classList.toggle('fc-lock', o);
     }
-    btn.addEventListener('click', function () { tg(dr.hidden); });
-    d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !dr.hidden) { tg(false); btn.focus(); } });
-    dr.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) tg(false); });
+
+    /* Attach the toggle first so menu setup errors cannot disable the button. */
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      tg(dr.hidden);
+    });
+
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !dr.hidden) { tg(false); btn.focus(); }
+    });
+    dr.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a')) tg(false);
+    });
+
+    var box = $('.fc-drawer-nav', dr);
+    if (box && !box.getAttribute('data-drawer-ready')) {
+      try {
+        var nav = $('.fc-nav ul');
+        var copy = nav ? nav.cloneNode(true) : d.createElement('ul');
+        copy.removeAttribute('data-tree-ready');
+
+        /* Keep the static homepage link and build the cloned menu separately. */
+        var homeItem = d.createElement('li');
+        var homeLink = d.createElement('a');
+        var homeSource = $('.fc-home-link');
+        homeLink.href = homeSource ? homeSource.href : (location.origin + '/');
+        homeLink.textContent = 'الرئيسية';
+        homeItem.appendChild(homeLink);
+        copy.insertBefore(homeItem, copy.firstChild);
+        buildMenuTree(copy);
+        box.appendChild(copy);
+        box.setAttribute('data-drawer-ready', '1');
+        box.addEventListener('click', function (e) {
+          var link = e.target.closest && e.target.closest('li.has-submenu > a');
+          if (!link) return;
+          if (link.getAttribute('href') === '#') e.preventDefault();
+          link.parentElement.classList.toggle('submenu-open');
+        });
+      } catch (err) {
+        /* The drawer still opens and its static homepage link remains available. */
+      }
+    }
+
     if (window.matchMedia) {
       var mq = window.matchMedia('(min-width:901px)');
       var f = function (e) { if (e.matches && !dr.hidden) tg(false); };
-      if (mq.addEventListener) mq.addEventListener('change', f); else if (mq.addListener) mq.addListener(f);
+      if (mq.addEventListener) mq.addEventListener('change', f);
+      else if (mq.addListener) mq.addListener(f);
     }
   }
-
   /* ---------- Feeds & cards ---------- */
   function feed(path, n) {
     return fetch(path + (path.indexOf('?') > -1 ? '&' : '?') + 'alt=json&max-results=' + n, { credentials: 'same-origin' })

@@ -272,11 +272,10 @@ body{font-size:16px}.fc-wrap{padding-inline:16px}.fc-brand{font-size:26px}
 <b:includable id='main' var='this'>
 <ul>
 <li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
-<b:loop values='data:links' var='link'>
-<b:if cond='data:link.href != data:blog.homepageUrl'>
-<li expr:class='data:link.isCurrentPage ? "is-current" : ""'><a expr:href='data:link.href'><data:link.title/></a></li>
-</b:if>
-</b:loop>
+<li><a href='/search/label/%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A'>الذكاء الاصطناعي</a></li>
+<li><a href='/search/label/%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9'>التقنية</a></li>
+<li><a href='/search/label/%D8%B5%D9%86%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89'>صناعة المحتوى</a></li>
+<li><a href='/search/label/%D8%A3%D8%AF%D9%88%D8%A7%D8%AA%20%D9%85%D9%81%D9%8A%D8%AF%D8%A9'>أدوات مفيدة</a></li>
 </ul>
 </b:includable>
 </b:widget>

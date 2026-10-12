@@ -962,7 +962,7 @@ layout=grid</b:widget-setting>
           w.setAttribute('data-fc-fallback', '1');
           var title = el('h3', 'title', cfg.title);
           var content = el('div', 'widget-content');
-          content.textContent = 'label=' + cfg.label + '\\nsubtitle=' + cfg.subtitle + '\\ncount=' + cfg.count + '\\nlayout=' + cfg.layout;
+          content.textContent = 'label=' + cfg.label + '\nsubtitle=' + cfg.subtitle + '\ncount=' + cfg.count + '\nlayout=' + cfg.layout;
           w.appendChild(title); w.appendChild(content); host.appendChild(w); found.push(w);
         });
       }
@@ -1065,7 +1065,7 @@ layout=grid</b:widget-setting>
       var label = (c.label || '').trim(), title = c._title || c.title || label; if (!title) return;
       var n = Math.max(1, Math.min(12, parseInt(c.count, 10) || 4));
       var layout = /^(grid|list|compact)$/.test(c.layout) ? c.layout : 'grid';
-      var path = label ? '/feeds/posts/default/-/' + encodeURIComponent(label) : '/feeds/posts/default';
+      var path = label ? '/feeds/posts/default/-/' + encodeURIComponent(label).replace(/%20/g, '%20') : '/feeds/posts/default';
       var s = el('section', 'fc-sec fc-sec-' + layout), hd = el('header', 'fc-sec-head'), tw = el('div'), hid = 'fc-s-' + (++sid);
       if (first) { s.id = 'fc-sections'; first = false; }
       var h = el('h2', 'fc-sec-t', title); h.id = hid; tw.appendChild(h);

@@ -190,7 +190,7 @@ body.fc-error_page .fc-layout{grid-template-columns:minmax(0,1fr)}
 .fc-footer a{color:#c9d5f0}.fc-footer a:hover{color:#fff}
 .fc-footer .fc-labs a{border-color:#22305a;color:#c9d5f0}.fc-footer .fc-labs small{color:#8fa0c7}
 .fc-bottom{border-top:1px solid #1a2a52;padding-block:18px;font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#9fb0d3}
-.fc-copyright{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.fc-bottom .fc-copyright-brand{--wm:#fff;font-size:19px}.fc-bottom .fc-contact-email{direction:ltr;unicode-bidi:isolate;color:#c9d5f0;text-decoration:none}.fc-bottom .fc-contact-email:hover{text-decoration:underline}
+.fc-copyright{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.fc-bottom .fc-copyright-brand{--wm:#fff;font-size:19px}
 #fc-toast{position:fixed;inset-inline:0;bottom:24px;margin-inline:auto;width:max-content;max-width:90vw;background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px;font-size:15px;opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s;z-index:300}
 [data-theme=dark] #fc-toast{background:#e9eefb;color:#0a1020}
 #fc-toast.show{opacity:1;transform:none}

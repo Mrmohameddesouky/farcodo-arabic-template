@@ -103,6 +103,20 @@ html[data-theme=dark] a{color:#8bc5ff}
 html[data-theme=dark] .fc-banner{color:#fff!important}
 /* Dark-mode contrast for the homepage callout: “خلّيك في قلب التقنية”. */
 html[data-theme=dark] .fc-start-wrap{color:#e9eefb!important}
+/* Correct the actual cause of the faded callout: its light gradient was remaining in dark mode. */
+html[data-theme=dark] .fc-start{
+  background:#111a30!important;
+  background-image:none!important;
+  border-color:#2b3a58!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.22)!important;
+}
+html[data-theme=dark] .fc-start h2,
+html[data-theme=dark] #fc-start-title{color:#f4f7ff!important;opacity:1!important}
+html[data-theme=dark] .fc-start p{color:#c7d5ea!important;opacity:1!important}
+html[data-theme=dark] .fc-start .btn,
+html[data-theme=dark] .fc-start .btn-p{background:linear-gradient(110deg,#0878ff,#00b8f4)!important;color:#fff!important;opacity:1!important}
+html[data-theme=dark] .fc-start .btn svg{color:#fff!important;opacity:1!important}
+
 html[data-theme=dark] .fc-start,
 html[data-theme=dark] .fc-start-copy,
 html[data-theme=dark] #fc-start-title,

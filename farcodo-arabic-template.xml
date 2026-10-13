@@ -495,6 +495,17 @@ button,input[type=submit]{border-radius:999px}
 .fc-footer .fc-brand{display:inline-flex;align-items:center;gap:0!important}
 .fc-footer .fc-brand img{margin-inline-end:-.11em!important;flex:0 0 auto;object-fit:contain;transform:translateX(2px)}
 .fc-footer .fc-brand span{margin:0!important;padding:0!important;line-height:1;letter-spacing:0}
+
+/* Brand color correction: override legacy navy rules that appeared later in the stylesheet. */
+.fc-top,.fc-topbar,.topbar,.fc-topbar{background:linear-gradient(110deg,#0878f9 0%,#12bfe5 100%)!important;color:#fff!important}
+.fc-topbar a,.fc-topbar p{color:#fff!important}
+.fc-footer,.footer-wrapper,.footer{background:linear-gradient(110deg,#0878f9 0%,#12bfe5 100%)!important;color:#fff!important}
+.fc-footer a,.footer-wrapper a,.footer a,.fc-footer .fc-labs a{color:#fff!important}
+.fc-footer .fc-labs a{border-color:rgba(255,255,255,.45)!important}
+.fc-footer .fc-labs small{color:rgba(255,255,255,.85)!important}
+.fc-banner,.fc-hero,.fc-herosec .widget-content{border-color:rgba(8,120,249,.18)}
+.fc-banner{background-image:linear-gradient(135deg,#0878f9 0%,#0758d5 62%,#12bfe5 100%)}
+
 </b:skin>
 </head>
 <body expr:class='"fc-" + data:blog.pageType'>

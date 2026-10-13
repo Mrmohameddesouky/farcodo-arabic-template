@@ -55,6 +55,20 @@ html[data-theme=dark] .fc-searchbox,
 html[data-theme=dark] .fc-footer,
 html[data-theme=dark] .fc-bottom{background-color:#0a1020!important;color:#e9eefb!important}
 html[data-theme=dark] .fc-header{background:rgba(10,16,32,.96)!important;border-color:#263653}
+/* Dark mode polish: continuous bands and balanced footer alignment. */
+html[data-theme=dark] .fc-wrap{background:transparent!important;color:#e9eefb!important}
+html[data-theme=dark] .fc-top,
+html[data-theme=dark] .fc-topbar,
+html[data-theme=dark] .topbar{background:#082f46!important;color:#e9eefb!important}
+html[data-theme=dark] .fc-footer{background:#082f46!important;color:#d8e5f7!important}
+html[data-theme=dark] .fc-footer .fc-wrap,
+html[data-theme=dark] .fc-footer .fc-foot-grid,
+html[data-theme=dark] .fc-footer .fc-bottom{background:transparent!important}
+html[data-theme=dark] .fc-footer .fc-brand{justify-content:flex-start;align-items:center;gap:8px;margin-inline-start:0;padding-inline:0}
+html[data-theme=dark] .fc-footer .fc-brand img{margin-inline-end:0}
+html[data-theme=dark] .fc-footer .fc-foot-grid{align-items:start}
+html[data-theme=dark] .fc-footer .fc-copyright{align-items:center}
+
 html[data-theme=dark] .fc-brand,
 html[data-theme=dark] .fc-home-link,
 html[data-theme=dark] .fc-nav a,

@@ -494,7 +494,7 @@ button,input[type=submit]{border-radius:999px}
 .fc-home-ico{width:22px;height:22px;flex:0 0 22px;padding:5px;box-sizing:content-box;border-radius:8px;background:linear-gradient(145deg,#0878f9 0%,#12bfe5 100%);stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 4px rgba(8,120,249,.2))}
 .fc-home-link:hover .fc-home-ico,.fc-mobile-home:hover .fc-home-ico{filter:drop-shadow(0 3px 6px rgba(8,120,249,.28))}
 .fc-footer .fc-brand{display:inline-flex;align-items:center;gap:0!important}
-.fc-footer .fc-brand img{margin-inline-end:-.3em!important;flex:0 0 auto;object-fit:contain;transform:translateX(2px)}
+.fc-footer .fc-brand img{margin-inline-end:-.11em!important;flex:0 0 auto;object-fit:contain;transform:translateX(2px)}
 .fc-footer .fc-brand span{margin:0!important;padding:0!important;line-height:1;letter-spacing:0}
 </b:skin>
 </head>

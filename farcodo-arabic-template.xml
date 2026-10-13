@@ -65,7 +65,7 @@ html[data-theme=dark] .fc-footer .fc-wrap,
 html[data-theme=dark] .fc-footer .fc-foot-grid,
 html[data-theme=dark] .fc-footer .fc-bottom{background:transparent!important}
 html[data-theme=dark] .fc-footer .fc-brand{justify-content:flex-start;align-items:center;gap:8px;margin-inline-start:0;padding-inline:0}
-html[data-theme=dark] .fc-footer .fc-brand img{margin-inline-end:0}
+html[data-theme=dark] .fc-footer .fc-brand img{margin-inline-end:-.11em!important}
 html[data-theme=dark] .fc-footer .fc-foot-grid{align-items:start}
 html[data-theme=dark] .fc-footer .fc-copyright{align-items:center}
 
@@ -151,7 +151,7 @@ a:hover{text-decoration:underline}
 .fc-brand{display:inline-flex;align-items:center;direction:ltr;gap:0;font:700 30px/1 var(--font);letter-spacing:-.01em;color:var(--wm);text-decoration:none!important;white-space:nowrap}
 .fc-brand img{height:1.04em;width:auto;display:block;aspect-ratio:891/877;flex-shrink:0;margin-inline-end:-.11em}
 .fc-brand span{display:block}
-.fc-home-link,.fc-mobile-home{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 14px;border-radius:999px;color:var(--ink);font-weight:600;font-size:16px;white-space:nowrap;text-decoration:none!important}.fc-home-ico{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.fc-home-link:hover,.fc-mobile-home:hover{background:color-mix(in srgb,var(--blue) 10%,transparent);text-decoration:none}
+.fc-home-link,.fc-mobile-home{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:8px 15px;border:1px solid color-mix(in srgb,var(--blue) 18%,transparent);border-radius:999px;color:var(--ink);font-weight:700;font-size:16px;white-space:nowrap;text-decoration:none!important;transition:background .2s ease,border-color .2s ease,transform .2s ease}.fc-home-ico{width:20px;height:20px;flex:0 0 20px;padding:4px;box-sizing:content-box;border-radius:9px;background:linear-gradient(135deg,#1478ff 0%,#13c8e8 100%);fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 3px 5px rgba(20,120,255,.22))}.fc-home-link:hover,.fc-mobile-home:hover{background:color-mix(in srgb,var(--blue) 10%,transparent);border-color:color-mix(in srgb,var(--blue) 38%,transparent);transform:translateY(-1px);text-decoration:none}.fc-home-link:hover .fc-home-ico,.fc-mobile-home:hover .fc-home-ico{filter:drop-shadow(0 4px 7px rgba(20,120,255,.32))}
 .fc-home-link:hover{background:color-mix(in srgb,var(--blue) 10%,transparent);text-decoration:none}
 .fc-nav{flex:1;min-width:0}
 .fc-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}

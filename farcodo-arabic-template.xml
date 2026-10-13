@@ -101,6 +101,17 @@ html[data-theme=dark] input::placeholder,
 html[data-theme=dark] textarea::placeholder{color:#bdc9df!important;opacity:1}
 html[data-theme=dark] a{color:#8bc5ff}
 html[data-theme=dark] .fc-banner{color:#fff!important}
+/* Dark-mode contrast for the homepage callout: “خلّيك في قلب التقنية”. */
+html[data-theme=dark] .fc-start-wrap{color:#e9eefb!important}
+html[data-theme=dark] .fc-start,
+html[data-theme=dark] .fc-start-copy,
+html[data-theme=dark] #fc-start-title,
+html[data-theme=dark] .fc-start-copy h2{color:#e9eefb!important}
+html[data-theme=dark] .fc-start-copy p{color:#c7d5ea!important;opacity:1!important}
+html[data-theme=dark] .fc-start .btn,
+html[data-theme=dark] .fc-start .btn-p{color:#fff!important;opacity:1!important}
+html[data-theme=dark] .fc-start .btn svg{color:#fff!important;opacity:1!important}
+
 html[data-theme=dark] .fc-footer a,
 html[data-theme=dark] .fc-bottom a{color:#d9e8ff!important}
 

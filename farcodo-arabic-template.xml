@@ -588,10 +588,10 @@ alt=</b:widget-setting>
 <b:widget id='HTML2' locked='false' title='اللافتة الرئيسية' type='HTML' version='2' visible='true'>
 <b:widget-settings>
 <b:widget-setting name='content'># اللافتة الرئيسية للصفحة الأولى. لإخفائها: hidden=yes  أو احذف الأداة من التخطيط.
-badge=تقنية بالعربية
-heading=كل ما يهمك في التقنية والذكاء الاصطناعي
-description=شروحات ومراجعات وأدوات مختارة بعناية، مكتوبة بلغة واضحة لتفهمها وتستفيد منها مباشرة.
-button1=ابدأ من هنا | /search/label/الذكاء الاصطناعي
+badge=مرحبًا بك في مدونة فاركودو
+heading=محتوى تقني ذكي .. يصنع الفرق
+description=مدونة عربية تهدف إلى تقديم شروحات مبسطة، وأدوات مفيدة، وأفكار مبتكرة في عالم التقنية والذكاء الاصطناعي وصناعة المحتوى.
+button1=استكشف المقالات | /search
 button2=استكشف الأقسام | #fc-sections
 image=
 alt=

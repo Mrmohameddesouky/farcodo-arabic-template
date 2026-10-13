@@ -25,10 +25,10 @@ Name:   Farcodo Arabic
 Version: 2.0.0
 Notes:  Original RTL Arabic template for Farcodo.
 -----------------------------------------------
-<Variable name="brand.navy" description="اللون الكحلي" type="color" default="#0a1a3f" value="#0a1a3f"/>
+<Variable name="brand.navy" description="الأزرق الأساسي لهوية Farcodo" type="color" default="#0878f9" value="#0878f9"/>
 <Variable name="brand.blue" description="الأزرق الكهربائي" type="color" default="#0a5cff" value="#0a5cff"/>
 <Variable name="brand.cyan" description="السماوي" type="color" default="#00c8ff" value="#00c8ff"/>
-<Variable name="footer.bg" description="خلفية التذييل" type="color" default="#07122e" value="#07122e"/>
+<Variable name="footer.bg" description="خلفية التذييل" type="color" default="#0878f9" value="#0878f9"/>
 <Variable name="layout.width" description="أقصى عرض للمحتوى" type="length" default="1240px" min="960px" max="1500px" value="1240px"/>
 <Variable name="card.radius" description="استدارة البطاقات" type="length" default="16px" min="0px" max="28px" value="16px"/>
 */
@@ -59,8 +59,8 @@ html[data-theme=dark] .fc-header{background:rgba(10,16,32,.96)!important;border-
 html[data-theme=dark] .fc-wrap{background:transparent!important;color:#e9eefb!important}
 html[data-theme=dark] .fc-top,
 html[data-theme=dark] .fc-topbar,
-html[data-theme=dark] .topbar{background:#082f46!important;color:#e9eefb!important}
-html[data-theme=dark] .fc-footer{background:#082f46!important;color:#d8e5f7!important}
+html[data-theme=dark] .topbar{background:linear-gradient(110deg,#0878f9 0%,#12bfe5 100%)!important;color:#fff!important}
+html[data-theme=dark] .fc-footer{background:linear-gradient(110deg,#0878f9 0%,#12bfe5 100%)!important;color:#fff!important}
 html[data-theme=dark] .fc-footer .fc-wrap,
 html[data-theme=dark] .fc-footer .fc-foot-grid,
 html[data-theme=dark] .fc-footer .fc-bottom{background:transparent!important}

@@ -190,8 +190,7 @@ a:hover{text-decoration:underline}
 /* Layout */
 .fc-main-wrap{padding-block:28px 56px}
 .fc-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}
-.fc-layout:has(.fc-hero){grid-template-columns:minmax(0,1fr)}
-.fc-layout:has(.fc-hero) .fc-side{display:none}
+/* Keep the sidebar visible on the homepage to match the approved Farcodo reference layout. */
 body.fc-error_page .fc-side{display:none}
 body.fc-error_page .fc-layout{grid-template-columns:minmax(0,1fr)}
 .fc-side{display:grid;gap:20px;position:sticky;top:calc(var(--hh) + 20px)}

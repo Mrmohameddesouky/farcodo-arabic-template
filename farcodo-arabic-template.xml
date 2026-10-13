@@ -610,7 +610,7 @@ posts=show</b:widget-setting>
 <b:if cond='data:blog.pageType == "error_page"'>
 <b:include name='fc-error'/>
 
-<b:elseif cond='data:blog.pageType == "item" or data:blog.pageType == "fc-item"'/>
+<b:elseif cond='data:view.isSingleItem'/>
 <b:loop values='data:posts' var='post'><b:include data='post' name='fc-article'/></b:loop>
 <nav aria-label='التنقل بين المقالات' class='fc-pager'>
 <b:if cond='data:olderPageUrl'><a class='btn' expr:href='data:olderPageUrl' rel='prev'><svg aria-hidden='true' class='ico'><use href='#i-right'/></svg>المقال السابق</a></b:if>

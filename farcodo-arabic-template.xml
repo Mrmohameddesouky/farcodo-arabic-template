@@ -724,7 +724,7 @@ posts=show</b:widget-setting>
 </b:includable>
 
 <b:includable id='fc-article' var='post'>
-<article class='fc-article' expr:data-id='data:post.id'>
+<article class='fc-article' expr:data-id='data:post.id' expr:itemid='data:post.url' itemscope='itemscope' itemtype='https://schema.org/BlogPosting'>
 <nav aria-label='مسار التنقل' class='fc-bc'><ol>
 <li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
 <b:if cond='data:post.labels'><b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:i == 0'><li><a expr:href='data:label.url'><data:label.name/></a></li></b:if></b:loop></b:if>
@@ -732,15 +732,15 @@ posts=show</b:widget-setting>
 </ol></nav>
 <header>
 <b:if cond='data:post.labels'><div class='fc-chips'><b:loop values='data:post.labels' var='label'><a class='fc-chip' expr:href='data:label.url' rel='tag'><data:label.name/></a></b:loop></div></b:if>
-<h1 class='fc-title'><data:post.title/></h1>
+<h1 class='fc-title' itemprop='headline'><data:post.title/></h1>
 <div class='fc-pmeta'>
-<b:if cond='data:post.author.name'><span class='au'><b:if cond='data:post.author.authorPhoto.url'><img alt='' expr:src='data:post.author.authorPhoto.url' height='28' width='28'/></b:if><span class='au-name'><data:post.author.name/></span></span></b:if>
-<span>نُشر في: <time><data:post.date/></time></span>
+<b:if cond='data:post.author.name'><span class='au'><b:if cond='data:post.author.authorPhoto.url'><img alt='' expr:src='data:post.author.authorPhoto.url' height='28' width='28'/></b:if><span class='au-name' itemprop='author' itemscope='itemscope' itemtype='https://schema.org/Person'><span itemprop='name'><data:post.author.name/></span></span></span></b:if>
+<span>نُشر في: <time itemprop='datePublished' expr:datetime='data:post.timestampISO8601'><data:post.date/></time></span>
 <span class='fc-upd' hidden='hidden'></span>
 <span class='fc-rt'></span>
 </div>
 </header>
-<div class='post-body' expr:id='"post-body-" + data:post.id'><data:post.body/></div>
+<div class='post-body' expr:id='"post-body-" + data:post.id' itemprop='articleBody'><data:post.body/></div>
 <footer class='fc-foot'>
 <div class='fc-share' role='group' aria-label='مشاركة المقال'>
 <strong>شارك المقال:</strong>

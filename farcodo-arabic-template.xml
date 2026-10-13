@@ -740,7 +740,7 @@ posts=show</b:widget-setting>
 <span class='fc-rt'></span>
 </div>
 </header>
-<div class='post-body' expr:id='"post-body-" + data:post.id' itemprop='articleBody'><data:post.body/></div>
+<div class='post-body fc-article-body' expr:id='"post-body-" + data:post.id' itemprop='articleBody' style='display:block!important;visibility:visible!important;opacity:1!important;min-height:1px;color:var(--ink)'><data:post.body/></div>
 <footer class='fc-foot'>
 <div class='fc-share' role='group' aria-label='مشاركة المقال'>
 <strong>شارك المقال:</strong>
